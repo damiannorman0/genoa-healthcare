@@ -1,26 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import logo from './logo.svg';
+import Appointments from './components/Appointments';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+        <div className="App">
+          <header className="App-header">
+            <h1 className="App-title">Patient Portal</h1>
+          </header>
+            <div>
+                <Appointments />
+            </div>
+        </div>
+    );
+  }
 }
-
-export default App;
+export default connect()(App);
