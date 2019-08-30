@@ -1,4 +1,4 @@
-export default (state = {}, action) => {
+export default (state = { test: 'ok'}, action) => {
 	switch (action.type) {
 		case 'GET_APPOINTMENTS_ACTION':
 			return {

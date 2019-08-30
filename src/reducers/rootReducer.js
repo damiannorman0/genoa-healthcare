@@ -4,6 +4,6 @@ import appointmentsReducer from './appointmentsReducer';
 
 
 export default combineReducers({
-	userReducer,
-	appointmentsReducer
+	user: userReducer,
+	appointments: appointmentsReducer
 });
