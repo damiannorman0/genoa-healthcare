@@ -17,7 +17,6 @@ const Appointments = (props) => {
 
 	return (
 		<div className="Appointments">
-			<h1>appointments</h1>
 			<ReactTable
 				data={appointments}
 				defaultPageSize={10}

@@ -28,7 +28,8 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="App">
-				<AppHeader title={"Welcome to the Patient Portal"} />
+				<AppHeader title={"Welcome to the Patient Portal"}
+							selected={''} />
 				<section>
 					<Appointments
 						dateFormat={getDate}
