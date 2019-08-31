@@ -20,7 +20,8 @@ class App extends Component {
 
 	navigate(path) {
 		debugger
-		this.context.history.push(path);
+		let {history} = this.props;
+		history.push(path);
 	}
 
 	render() {

@@ -6,16 +6,17 @@ import './index.css';
 import App from './App';
 import Detail from './containers/Detail';
 import Physician from './containers/Physician';
-
+import { createBrowserHistory } from "history";
 import {register} from './serviceWorker';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import { BrowserRouter as Router, Route, BrowserHistory } from 'react-router-dom'
+const history = createBrowserHistory();
 
 
 
 ReactDOM.render(
 	<Provider store={configureStore()}>
-		<Router>
+		<Router history={history}>
 			<Route exact path="/" component={App} />
 			<Route path="/detail/:id" component={Detail} />
 			<Route path="/physician" component={Physician} />
