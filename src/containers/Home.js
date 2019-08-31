@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import logo from './logo.svg';
-import Appointments from './components/Appointments';
-import './App.css';
-import {appointmentsAction} from './actions/appointmentsAction';
-import {getDate, getTime} from './Utils';
+import logo from '../logo.svg';
+import Appointments from '../components/Appointments';
+import '../App.css';
+import {appointmentsAction} from '../actions/appointmentsAction';
+import {getDate, getTime} from '../Utils';
 
 
-class App extends Component {
+class Home extends Component {
 	constructor(props){
 		super(props);
 
@@ -57,4 +57,4 @@ const mapDispatchToProps = dispatch =>
 	);
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

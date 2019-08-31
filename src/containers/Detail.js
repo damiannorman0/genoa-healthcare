@@ -37,9 +37,13 @@ class Detail extends Component {
 	render() {
 		const {appointments = [], appointment = {}} = this.props;
 		return (
-			<div className="container">
+			<div className="Detail">
 				{`${appointments.length},`}
 				{`${appointment.id}`}
+				<header>Appointment Details</header>
+				<section>
+					<div>time</div>
+				</section>
 			</div>
 		);
 	}

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './store';
 import './index.css';
-import App from './App';
+import App from './containers/Home';
 import Detail from './containers/Detail';
 import Physician from './containers/Physician';
 import { createBrowserHistory } from "history";
