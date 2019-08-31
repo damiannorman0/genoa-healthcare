@@ -1,11 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  font-family:Avenir;
 }
 
 .App-header {
@@ -17,19 +12,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-family:Avenir
 }
 
 /*overrides*/
@@ -56,8 +39,72 @@
 }
 
 section {
-  padding: 10px;
+  padding: 20px;
   margin: 10px;
   border-radius: 10px;
   background-color: rgba(97, 218, 254, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+  font-family:Avenir;
+  position: relative;
 }
+
+section .row {
+  display: flex;
+  flex-direction: row;
+}
+
+section .row:first-child div:first-child {
+  border-top-left-radius: 10px;
+}
+
+section .row:last-child div:first-child {
+  border-bottom-left-radius: 10px;
+  background-color: #282c34;
+}
+
+section .row div:first-child {
+  width: 15%;
+  font-weight: bold;
+  background-color: #61dafb;
+  border-bottom: solid;
+  border-color: white;
+  text-transform: uppercase;
+}
+
+section .row div {
+  padding: 10px;
+}
+
+section .actions {
+  position: absolute;
+  right: 0px;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+section .actions .reschedule,  section .actions .cancel{
+  background-color:burlywood;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: medium;
+}
+
+section .actions .reschedule{
+  background-color:burlywood;
+  color: #282c34;
+}
+
+section .actions .cancel {
+  background-color:brown;
+}
+
+

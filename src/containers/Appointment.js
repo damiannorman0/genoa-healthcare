@@ -44,11 +44,26 @@ class Appointment extends Component {
 					<h1 className="App-title">Appointment Detail</h1>
 				</header>
 				<section>
-					<div>{`time: ${getDate(appointment.created_at)}, ${getTime(appointment.created_at)}`}</div>
-					<div>{`patient: ${appointment.patient_name}`}</div>
-					<div>{`phyiscian: ${appointment.physician_name}`}</div>
-					<div>{`notes: ${appointment.notes}`}</div>
-
+					<div className="row">
+						<div>time: </div>
+						<div>{`${getDate(appointment.created_at)}, ${getTime(appointment.created_at)}`}</div>
+					</div>
+					<div className="row">
+						<div>patient: </div>
+						<div>{`${appointment.patient_name}`}</div>
+					</div>
+					<div className="row">
+						<div>phyiscian: </div>
+						<div>{`${appointment.physician_name}`}</div>
+					</div>
+					<bu className="row">
+						<div>notes: </div>
+						<div>{`${appointment.notes}`}</div>
+					</bu>
+					<div className="actions">
+						<button className="reschedule">reschedule</button>
+						<button className="cancel">cancel</button>
+					</div>
 				</section>
 			</div>
 		);
