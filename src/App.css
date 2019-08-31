@@ -56,5 +56,8 @@
 }
 
 section {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
   background-color: rgba(97, 218, 254, 0.25);
 }

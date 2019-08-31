@@ -4,6 +4,8 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {appointmentsAction} from '../actions/appointmentsAction';
 import {appointmentAction} from '../actions/appointmentAction';
+import {getDate, getTime} from "../Utils";
+
 
 class Appointment extends Component {
 	constructor(props) {
@@ -42,7 +44,9 @@ class Appointment extends Component {
 					<h1 className="App-title">Appointment Detail</h1>
 				</header>
 				<section>
-					<div>time</div>
+					<div>{`time: ${getDate(appointment.created_at)}, ${getTime(appointment.created_at)}`}</div>
+					<div>{`patient: ${appointment.patient_name}`}</div>
+					<div>{`phyiscian: ${appointment.physician_name}`}</div>
 				</section>
 			</div>
 		);
