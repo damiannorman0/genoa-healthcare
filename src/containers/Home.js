@@ -8,6 +8,7 @@ import {appointmentsAction} from '../actions/appointmentsAction';
 import {getDate, getTime} from '../Utils';
 
 import AppHeader from '../components/AppHeader';
+import AppFooter from "../components/AppFooter";
 
 
 class Home extends Component {
@@ -28,7 +29,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="App">
-				<AppHeader title={"Welcome to the Patient Portal"}
+				<AppHeader title={"Welcome to the Patient Portal."}
 							selected={''} />
 				<section>
 					<Appointments
@@ -38,6 +39,7 @@ class Home extends Component {
 						appointments={this.props.appointments}
 					/>
 				</section>
+				<AppFooter />
 			</div>
 		);
 	}

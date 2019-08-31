@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import {appointmentsAction} from '../actions/appointmentsAction';
 import {appointmentAction} from '../actions/appointmentAction';
 import {getDate, getTime} from "../Utils";
+import AppFooter from "../components/AppFooter";
 
 
 class Appointment extends Component {
@@ -42,7 +43,7 @@ class Appointment extends Component {
 		const {appointments = [], appointment = {}} = this.props;
 		return (
 			<div>
-				<AppHeader title={"Appointments"} />
+				<AppHeader title={"Appointments."} />
 				<section>
 					<div className="row">
 						<div>time: </div>
@@ -65,6 +66,7 @@ class Appointment extends Component {
 						<button className="cancel">cancel</button>
 					</div>
 				</section>
+				<AppFooter />
 			</div>
 		);
 	}

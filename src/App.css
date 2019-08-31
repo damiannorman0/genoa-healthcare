@@ -130,4 +130,26 @@ nav a {
   color:white;
 }
 
+footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  text-transform: capitalize;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  right: 0;
+}
+
+footer div {
+  cursor: pointer;
+}
+
+footer div:hover {
+  opacity: 0.5;
+}
+
 
