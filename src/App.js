@@ -17,6 +17,12 @@ class App extends Component {
 			appointmentsAction();
 		}
 	}
+
+	navigate(path) {
+		debugger
+		this.context.history.push(path);
+	}
+
 	render() {
 		return (
 			<div className="App">
@@ -27,6 +33,7 @@ class App extends Component {
 					<Appointments
 						dateFormat={getDate}
 						timeFormat={getTime}
+						navigate={this.navigate.bind(this)}
 						appointments={this.props.appointments}
 					/>
 				</div>

@@ -13,7 +13,7 @@ const Appointments = (props) => {
 		result = (<div>Appointments no data</div>);
 	}
 
-	const { appointments = [], dateFormat, timeFormat } = props;
+	const { appointments = [], dateFormat, timeFormat, navigate } = props;
 
 	return (
 		<div className="Appointments">
@@ -28,6 +28,7 @@ const Appointments = (props) => {
 						return {
 							onClick: (e) => {
 								console.log(rowInfo.row._original);
+								navigate(`/detail/${rowInfo.row._original.id}`);
 							}
 						}
 					}else{
