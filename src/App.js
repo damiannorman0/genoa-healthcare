@@ -1,32 +1,43 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 import logo from './logo.svg';
 import Appointments from './components/Appointments';
 import './App.css';
-import { appointmentsAction } from './actions/appointmentsAction';
+import {appointmentsAction} from './actions/appointmentsAction';
+import {getDate, getTime} from './Utils';
 
 
 class App extends Component {
-  render() {
-  	debugger
-    return (
-        <div className="App">
-          <header className="App-header">
-            <h1 className="App-title">Patient Portal</h1>
-          </header>
-            <div>
-                <Appointments />
-            </div>
-        </div>
-    );
-  }
+	constructor(props){
+		super(props);
+
+		let {appointmentsAction} = this.props;
+		if (appointmentsAction) {
+			appointmentsAction();
+		}
+	}
+	render() {
+		return (
+			<div className="App">
+				<header className="App-header">
+					<h1 className="App-title">Patient Portal</h1>
+				</header>
+				<div>
+					<Appointments
+						dateFormat={getDate}
+						timeFormat={getTime}
+						appointments={this.props.appointments}
+					/>
+				</div>
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = (state, ownProps) => {
-	debugger
 	return {
-		appointments: state.appointments
+		appointments: state.appointments.result
 	};
 };
 
@@ -37,7 +48,6 @@ const mapDispatchToProps = dispatch =>
 		},
 		dispatch
 	);
-
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
