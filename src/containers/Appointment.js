@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {appointmentsAction} from '../actions/appointmentsAction';
 import {appointmentAction} from '../actions/appointmentAction';
 
-class Detail extends Component {
+class Appointment extends Component {
 	constructor(props) {
 		super(props);
 
@@ -38,9 +38,9 @@ class Detail extends Component {
 		const {appointments = [], appointment = {}} = this.props;
 		return (
 			<div className="Detail">
-				{`${appointments.length},`}
-				{`${appointment.id}`}
-				<header>Appointment Details</header>
+				<header className="App-header">
+					<h1 className="App-title">Appointment Detail</h1>
+				</header>
 				<section>
 					<div>time</div>
 				</section>
@@ -66,4 +66,4 @@ const mapDispatchToProps = dispatch =>
 	);
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Detail);
+export default connect(mapStateToProps, mapDispatchToProps)(Appointment);

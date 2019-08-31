@@ -28,7 +28,7 @@ const Appointments = (props) => {
 						return {
 							onClick: (e) => {
 								console.log(rowInfo.row._original);
-								navigate(`/detail/${rowInfo.row._original.id}`);
+								navigate(`/appointment/${rowInfo.row._original.id}`);
 							}
 						}
 					}else{

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import configureStore from './store';
 import './index.css';
 import App from './containers/Home';
-import Detail from './containers/Detail';
+import Appointment from './containers/Appointment';
 import Physician from './containers/Physician';
 import { createBrowserHistory } from "history";
 import {register} from './serviceWorker';
@@ -18,7 +18,7 @@ ReactDOM.render(
 	<Provider store={configureStore()}>
 		<Router history={history}>
 			<Route exact path="/" component={App} />
-			<Route path="/detail/:id" component={Detail} />
+			<Route path="/appointment/:id" component={Appointment} />
 			<Route path="/physician" component={Physician} />
 		</Router>
 	</Provider>,
