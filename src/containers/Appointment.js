@@ -47,6 +47,8 @@ class Appointment extends Component {
 					<div>{`time: ${getDate(appointment.created_at)}, ${getTime(appointment.created_at)}`}</div>
 					<div>{`patient: ${appointment.patient_name}`}</div>
 					<div>{`phyiscian: ${appointment.physician_name}`}</div>
+					<div>{`notes: ${appointment.notes}`}</div>
+
 				</section>
 			</div>
 		);
