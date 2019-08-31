@@ -7,6 +7,8 @@ import '../App.css';
 import {appointmentsAction} from '../actions/appointmentsAction';
 import {getDate, getTime} from '../Utils';
 
+import AppHeader from '../components/AppHeader';
+
 
 class Home extends Component {
 	constructor(props){
@@ -26,9 +28,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="App">
-				<header className="App-header">
-					<h1 className="App-title">Patient Portal</h1>
-				</header>
+				<AppHeader title={"Welcome to the Patient Portal"} />
 				<div>
 					<Appointments
 						dateFormat={getDate}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import AppHeader from '../components/AppHeader';
+
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {appointmentsAction} from '../actions/appointmentsAction';
@@ -39,10 +41,8 @@ class Appointment extends Component {
 	render() {
 		const {appointments = [], appointment = {}} = this.props;
 		return (
-			<div className="Detail">
-				<header className="App-header">
-					<h1 className="App-title">Appointment Detail</h1>
-				</header>
+			<div>
+				<AppHeader title={"Appointments"} />
 				<section>
 					<div className="row">
 						<div>time: </div>
