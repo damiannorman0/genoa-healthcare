@@ -23,11 +23,9 @@ const Appointments = (props) => {
 				defaultPageSize={10}
 				className="-striped -highlight"
 				getTrProps={(state, rowInfo) => {
-					console.log(rowInfo);
 					if (rowInfo && rowInfo.row) {
 						return {
 							onClick: (e) => {
-								console.log(rowInfo.row._original);
 								navigate(`/appointment/${rowInfo.row._original.id}`);
 							}
 						}
