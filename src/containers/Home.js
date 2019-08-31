@@ -29,14 +29,14 @@ class Home extends Component {
 		return (
 			<div className="App">
 				<AppHeader title={"Welcome to the Patient Portal"} />
-				<div>
+				<section>
 					<Appointments
 						dateFormat={getDate}
 						timeFormat={getTime}
 						navigate={this.navigate.bind(this)}
 						appointments={this.props.appointments}
 					/>
-				</div>
+				</section>
 			</div>
 		);
 	}
