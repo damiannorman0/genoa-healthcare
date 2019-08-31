@@ -12,11 +12,22 @@ class Detail extends Component {
 		const {id} = this.props.match.params;
 		const {appointments, appointmentsAction, appointmentAction} = this.props;
 
-		if(!appointments) {
+		if(!appointments.length) {
 			if (appointmentsAction) {
 				appointmentsAction();
 			}
 		} else {
+			if (appointmentAction) {
+				appointmentAction(id);
+			}
+		}
+	}
+
+	componentWillReceiveProps(nextProps, nextContext) {
+		const {id} = nextProps.match.params;
+		const {appointments, appointmentsAction, appointmentAction, appointment} = nextProps;
+
+		if(appointments.length && !appointment) {
 			if (appointmentAction) {
 				appointmentAction(id);
 			}

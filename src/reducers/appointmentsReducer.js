@@ -1,4 +1,8 @@
-export default (state = {}, action) => {
+const initialState = {
+	appointments: []
+};
+
+export default (state = initialState, action) => {
 	switch (action.type) {
 		case 'GET_APPOINTMENTS_ACTION':
 			return {
@@ -6,10 +10,13 @@ export default (state = {}, action) => {
 				appointments: action.payload
 			};
 		case 'GET_APPOINTMENT_ACTION':
-			debugger
-			const appointment = (state.appointments || []).find[app => {
-				return app.id === action.payload;
-			}];
+			let appointment;
+			for(var  i = 0; i <  state.appointments.length; i++) {
+				if (state.appointments[i].id === +action.payload.id) {
+					appointment = state.appointments[i];
+				}
+			}
+
 			return {
 				...state,
 				appointment
