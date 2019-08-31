@@ -19,7 +19,6 @@ class App extends Component {
 	}
 
 	navigate(path) {
-		debugger
 		let {history} = this.props;
 		history.push(path);
 	}
@@ -45,7 +44,7 @@ class App extends Component {
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		appointments: state.appointments.result
+		appointments: state.appointments.appointments
 	};
 };
 
