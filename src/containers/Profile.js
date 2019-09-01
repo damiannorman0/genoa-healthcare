@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import AppHeader from "../components/AppHeader";
 import AppFooter from "../components/AppFooter";
 import {bindActionCreators} from "redux";
@@ -22,7 +22,7 @@ class Profile extends Component {
 	componentWillReceiveProps(nextProps, nextContext) {
 		let {user, physiciansAction, physicians} = nextProps;
 
-		if(typeof(user.id) === "number" && !Object.keys(physicians).length) {
+		if (typeof (user.id) === "number" && !Object.keys(physicians).length) {
 			if (physiciansAction) {
 				physiciansAction();
 			}
@@ -40,28 +40,31 @@ class Profile extends Component {
 						   user={user}/>
 				<section>
 					<div className="row">
-						<div>Name: </div>
+						<div>Name:</div>
 						<div>{user.name}</div>
 					</div>
 					<div className="row">
-						<div>Physician Name: </div>
+						<div>Physician Name:</div>
 						<div>{physician.name}</div>
 					</div>
+					<div className="actions">
+						<button className="amber">request physician change</button>
+						<button className="red">message us</button>
+					</div>
 				</section>
-				<AppFooter />
+				<AppFooter/>
 			</div>
 		);
 	}
 }
 
 Profile.propTypes = {
-	appointment:PropTypes.object,
-	physicians:PropTypes.object
+	appointment: PropTypes.object,
+	physicians: PropTypes.object
 };
 
 Profile.defaultProps = {
-	physicians: {
-	}, user: {
+	physicians: {}, user: {
 		name: ''
 	}
 };

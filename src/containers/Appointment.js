@@ -71,8 +71,8 @@ class Appointment extends Component {
 						<div>{`${appointment.notes}`}</div>
 					</div>
 					<div className="actions">
-						<button className="reschedule">reschedule</button>
-						<button className="cancel">cancel</button>
+						<button className="amber">reschedule</button>
+						<button className="red">cancel appointment</button>
 					</div>
 				</section>
 				<AppFooter />
