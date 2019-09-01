@@ -6,11 +6,12 @@ import {userAction} from "../actions/userAction";
 import '../App.css';
 import {connect} from "react-redux";
 
-class Profile extends Component {
+class Resources extends Component {
 	constructor(props) {
 		super(props);
 
 		let {userAction, user} = this.props;
+
 		//would use token from sign in
 		if (userAction && !user.id) {
 			userAction();
@@ -21,8 +22,8 @@ class Profile extends Component {
 
 		return (
 			<div>
-				<AppHeader title={"Your Profile."}
-						   selected={'profile'}
+				<AppHeader title={"Be informed."}
+						   selected={'resources'}
 						   user={user}/>
 				<AppFooter />
 			</div>
@@ -44,4 +45,4 @@ const mapDispatchToProps = dispatch =>
 		dispatch
 	);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Profile);
+export default connect(mapStateToProps, mapDispatchToProps)(Resources);

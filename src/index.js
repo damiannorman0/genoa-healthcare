@@ -6,6 +6,10 @@ import './index.css';
 import Home from './containers/Home';
 import Appointment from './containers/Appointment';
 import Profile from './containers/Profile';
+import Meds from './containers/Meds';
+import Resources from './containers/Resources';
+
+
 import { createBrowserHistory } from "history";
 import {register} from './serviceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -20,6 +24,8 @@ ReactDOM.render(
 			<Route exact path="/" component={Home} />
 			<Route path="/appointment/:id" component={Appointment} />
 			<Route path="/profile" component={Profile} />
+			<Route path="/meds" component={Meds} />
+			<Route path="/resources" component={Resources} />
 		</Router>
 	</Provider>,
 	document.getElementById('root')

@@ -11,6 +11,12 @@ const AppHeader = (props) => {
 	}, {
 		text: 'Profile',
 		link: '/profile'
+	}, {
+		text: 'Medications',
+		link: '/meds'
+	}, {
+		text: 'Resources',
+		link: '/resources'
 	}].map((item, index) => {
 		let style;
 		if (item.text.toLowerCase() === selected.toLowerCase()) {
