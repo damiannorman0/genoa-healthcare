@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import people from '../../src/people.png';
 
 
 
@@ -14,6 +15,7 @@ class AppHeader extends Component {
 		return (
 			<div>
 				<header className="App-header">
+					<img src={people} alt="Logo" />
 					<h1 className="App-title">{title}</h1>
 				</header>
 				<nav>
