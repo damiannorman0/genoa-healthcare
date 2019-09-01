@@ -33,7 +33,7 @@ class Appointment extends Component {
 		}
 	}
 
-	componentWillReceiveProps(nextProps, nextContext) {
+	shouldComponentUpdate(nextProps, nextState, nextContext) {
 		const {id} = nextProps.match.params;
 		const {appointments, appointmentAction, appointment} = nextProps;
 
@@ -42,6 +42,8 @@ class Appointment extends Component {
 				appointmentAction(id);
 			}
 		}
+
+		return true;
 	}
 
 	render() {

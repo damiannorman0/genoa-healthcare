@@ -19,14 +19,16 @@ class Profile extends Component {
 		}
 	}
 
-	componentWillReceiveProps(nextProps, nextContext) {
-		let {user, physiciansAction, physicians} = nextProps;
+	shouldComponentUpdate(nextProps, nextState, nextContext) {
+		const {user, physiciansAction, physicians} = nextProps;
 
 		if (typeof (user.id) === "number" && !Object.keys(physicians).length) {
 			if (physiciansAction) {
 				physiciansAction();
 			}
 		}
+
+		return true;
 	}
 
 	render() {
