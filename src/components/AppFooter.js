@@ -14,7 +14,7 @@ class AppFooter extends Component {
 		return (
 			<footer>
 				<div>privacy</div>
-				<div>contact</div>
+				<div>contact us</div>
 			</footer>
 		);
 	}

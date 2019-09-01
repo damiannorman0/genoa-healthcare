@@ -14,5 +14,9 @@ export const getTime = (date) => {
 
 	let time = date.split('T')[1];
 	time = time.split('-')[0];
+	time = time.split(":");
+	time.pop();
+	time = time.join(':');
+
 	return time;
 };
