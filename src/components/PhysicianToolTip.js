@@ -30,7 +30,7 @@ class PhysicianToolTip extends Component {
 				<div className="content">
 					<img src={physician.image} />
 					<div className="content-row">
-						<div>Phyisican Name2:</div><div>{physician.name} </div>
+						<div>Phyisican Name:</div><div>{physician.name} </div>
 					</div>
 					<div className="content-row">
 						<div>Specialty: </div><div>{physician.specialty}</div>

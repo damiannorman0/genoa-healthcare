@@ -54,17 +54,10 @@ const Appointments = (props) => {
 						}
 					},
 					{
-						Header: "Created",
-						id: "created",
+						Header: "Date and Time",
+						id: "start",
 						accessor: d => {
-							return (`${getDate(d.created_at)}, ${getTime(d.created_at)}`)
-						}
-					},
-					{
-						Header: "Updated",
-						id: "updated",
-						accessor: d => {
-							return (`${getDate(d.updated_at)}, ${getTime(d.updated_at)}`)
+							return (`${getDate(d.start)}, ${getTime(d.start)}`)
 						}
 					}
 				]}
