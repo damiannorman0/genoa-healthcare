@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import logo from '../logo.svg';
 import Appointments from '../components/Appointments';
 import '../App.css';
 import {appointmentsAction} from '../actions/appointmentsAction';

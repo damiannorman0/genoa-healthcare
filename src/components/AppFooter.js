@@ -1,23 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React from 'react';
 
+const AppFooter = (props) => {
+	return (
+		<footer>
+			<div>privacy</div>
+			<div>contact us</div>
+		</footer>
+	);
+};
 
+AppFooter.propTypes = {
+};
 
-class AppFooter extends Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		const {title = ''} = this.props;
-		return (
-			<footer>
-				<div>privacy</div>
-				<div>contact us</div>
-			</footer>
-		);
-	}
-}
+AppFooter.defaultProps = {
+};
 
 export default (AppFooter);

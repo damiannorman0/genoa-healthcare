@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 import PropTypes from 'prop-types';
@@ -8,7 +8,7 @@ import PhysicianToolTip from "./PhysicianToolTip";
 import ReactTooltip from "react-tooltip";
 
 const Appointments = (props) => {
-	const {appointments = [], dateFormat, timeFormat, navigate, physicians} = props;
+	const {appointments = [], navigate, physicians} = props;
 	return (
 		<div className="Appointments">
 			<ReactTooltip/>

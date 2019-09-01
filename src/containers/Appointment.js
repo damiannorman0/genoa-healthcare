@@ -9,7 +9,6 @@ import {appointmentAction} from '../actions/appointmentAction';
 import {getDate, getTime} from "../Utils";
 import AppFooter from "../components/AppFooter";
 import PropTypes from "prop-types";
-import Appointments from "../components/Appointments";
 
 
 class Appointment extends Component {
@@ -32,7 +31,7 @@ class Appointment extends Component {
 
 	componentWillReceiveProps(nextProps, nextContext) {
 		const {id} = nextProps.match.params;
-		const {appointments, appointmentsAction, appointmentAction, appointment} = nextProps;
+		const {appointments, appointmentAction, appointment} = nextProps;
 
 		if(appointments.length && !appointment.id) {
 			if (appointmentAction) {
@@ -42,7 +41,7 @@ class Appointment extends Component {
 	}
 
 	render() {
-		const {appointments = [], appointment = {}} = this.props;
+		const {appointment = {}} = this.props;
 		return (
 			<div>
 				<AppHeader
@@ -62,10 +61,10 @@ class Appointment extends Component {
 						<div>phyiscian: </div>
 						<div>{`${appointment.physician_name}`}</div>
 					</div>
-					<bu className="row">
+					<div className="row">
 						<div>notes: </div>
 						<div>{`${appointment.notes}`}</div>
-					</bu>
+					</div>
 					<div className="actions">
 						<button className="reschedule">reschedule</button>
 						<button className="cancel">cancel</button>

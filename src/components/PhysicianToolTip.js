@@ -28,7 +28,7 @@ class PhysicianToolTip extends Component {
 		if(this.state.show) {
 			content = (
 				<div className="content">
-					<img src={physician.image} />
+					<img src={physician.image} alt={`${physician.name}`} />
 					<div className="content-row">
 						<div>Phyisican Name:</div><div>{physician.name} </div>
 					</div>
