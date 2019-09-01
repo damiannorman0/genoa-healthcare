@@ -10,7 +10,8 @@ export const physiciansAction = (id) => {
 					"updated_at" : "2015-04-21T10:44:51-06:00",
 					"name" : "Gregory House",
 					"specialty": "Mental Health",
-					"education": "All of it"
+					"education": "All of it",
+					"image": "/house.png"
 				}
 			}
 		});
