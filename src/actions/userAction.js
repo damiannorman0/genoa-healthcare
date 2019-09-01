@@ -8,6 +8,7 @@ export const userAction = (token) => dispatch => {
 				"end": "2015-04-24T07:30:00-06:00",
 				"id": 0,
 				"user_id": 16,
+				"physician_id" : 14,
 				"start": "2015-04-24T07:00:00-06:00",
 				"updated_at": "2015-04-21T10:44:51-06:00",
 				"name": "Mike Ross",

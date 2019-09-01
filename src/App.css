@@ -113,7 +113,7 @@ section {
   background-color: rgba(97, 218, 254, 0.25);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 150px;
   position: relative;
 }
@@ -129,7 +129,6 @@ section .row:first-child div:first-child {
 
 section .row:last-child div:first-child {
   border-bottom-left-radius: 10px;
-  background-color: #282c34;
 }
 
 section .row div:first-child {
