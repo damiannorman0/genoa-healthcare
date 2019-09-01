@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import AppHeader from "../components/AppHeader";
 import AppFooter from "../components/AppFooter";
 
-class Physician extends Component {
+class Profile extends Component {
 	render() {
 		return (
 			<div>
-				<AppHeader title={"Physician."}
+				<AppHeader title={"Profile."}
 						   selected={'profile'} />
 				<AppFooter />
 			</div>
@@ -14,4 +14,4 @@ class Physician extends Component {
 	}
 }
 
-export default Physician;
+export default Profile;

@@ -5,7 +5,7 @@ import configureStore from './store';
 import './index.css';
 import Home from './containers/Home';
 import Appointment from './containers/Appointment';
-import Physician from './containers/Physician';
+import Profile from './containers/Profile';
 import { createBrowserHistory } from "history";
 import {register} from './serviceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -19,7 +19,7 @@ ReactDOM.render(
 		<Router history={history}>
 			<Route exact path="/" component={Home} />
 			<Route path="/appointment/:id" component={Appointment} />
-			<Route path="/physician" component={Physician} />
+			<Route path="/profile" component={Profile} />
 		</Router>
 	</Provider>,
 	document.getElementById('root')

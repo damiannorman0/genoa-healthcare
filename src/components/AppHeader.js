@@ -17,7 +17,7 @@ class AppHeader extends Component {
 			link: '/'
 		}, {
 			text: 'Profile',
-			link: '/physician'
+			link: '/profile'
 		}].map((item, index) => {
 			let style;
 			if(item.text.toLowerCase() === selected.toLowerCase()) {

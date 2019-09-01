@@ -23,7 +23,7 @@ export const appointmentsAction = () => {
 					"physician_id" : 14,
 					"start" : "2015-04-25T07:00:00-06:00",
 					"updated_at" : "2015-04-22T10:44:51-06:00",
-					"patient_name" :"John Doe",
+					"patient_name" :"Mike Ross",
 					"physician_name" : "Gregory House",
 					"notes": "patient is showing signs of depression"
 				}

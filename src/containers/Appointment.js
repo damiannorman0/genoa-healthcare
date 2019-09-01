@@ -44,7 +44,7 @@ class Appointment extends Component {
 		return (
 			<div>
 				<AppHeader
-					title={"Appointment."}
+					title={"Your appointment."}
 					selected={''}
 				/>
 				<section>
