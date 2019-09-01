@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './store';
 import './index.css';
-import App from './containers/Home';
+import Home from './containers/Home';
 import Appointment from './containers/Appointment';
 import Physician from './containers/Physician';
 import { createBrowserHistory } from "history";
@@ -17,7 +17,7 @@ const history = createBrowserHistory();
 ReactDOM.render(
 	<Provider store={configureStore()}>
 		<Router history={history}>
-			<Route exact path="/" component={App} />
+			<Route exact path="/" component={Home} />
 			<Route path="/appointment/:id" component={Appointment} />
 			<Route path="/physician" component={Physician} />
 		</Router>

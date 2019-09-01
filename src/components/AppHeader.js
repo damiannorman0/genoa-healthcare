@@ -11,7 +11,24 @@ class AppHeader extends Component {
 	}
 
 	render() {
-		const {title = ''} = this.props;
+		const {title = '', selected} = this.props;
+		const links = [{
+			text: 'Appointments',
+			link: '/'
+		}, {
+			text: 'Profile',
+			link: '/physician'
+		}].map(item => {
+			let style;
+			if(item.text.toLowerCase() === selected.toLowerCase()) {
+				style = {
+					opacity: 0.5
+				};
+			}
+
+			return <Link to={item.link} style={style}>{item.text}</Link>;
+		});
+
 		return (
 			<div>
 				<header className="App-header">
@@ -19,8 +36,7 @@ class AppHeader extends Component {
 					<h1 className="App-title">{title}</h1>
 				</header>
 				<nav>
-					<Link to="/">Appointments</Link>
-					<Link to='/physician'>Profile</Link>
+					{links}
 				</nav>
 			</div>
 		);

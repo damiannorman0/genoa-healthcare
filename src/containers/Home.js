@@ -30,7 +30,7 @@ class Home extends Component {
 		return (
 			<div className="App">
 				<AppHeader title={"Welcome to the Patient Portal."}
-							selected={''} />
+							selected={'appointments'} />
 				<section>
 					<Appointments
 						dateFormat={getDate}

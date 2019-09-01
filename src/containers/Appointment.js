@@ -43,7 +43,10 @@ class Appointment extends Component {
 		const {appointments = [], appointment = {}} = this.props;
 		return (
 			<div>
-				<AppHeader title={"Appointment."} />
+				<AppHeader
+					title={"Appointment."}
+					selected={''}
+				/>
 				<section>
 					<div className="row">
 						<div>time: </div>
