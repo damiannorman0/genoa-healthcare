@@ -18,7 +18,7 @@ class AppHeader extends Component {
 		}, {
 			text: 'Profile',
 			link: '/physician'
-		}].map(item => {
+		}].map((item, index) => {
 			let style;
 			if(item.text.toLowerCase() === selected.toLowerCase()) {
 				style = {
@@ -26,13 +26,12 @@ class AppHeader extends Component {
 				};
 			}
 
-			return <Link to={item.link} style={style}>{item.text}</Link>;
+			return <Link key={`link_${index}`} to={item.link} style={style}>{item.text}</Link>;
 		});
 
 		return (
 			<div>
 				<header className="App-header">
-					<img src={people} alt="Logo" />
 					<h1 className="App-title">{title}</h1>
 				</header>
 				<nav>

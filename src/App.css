@@ -11,18 +11,20 @@
   color: white;
   font-family:Avenir;
   text-align: center;
+  background-image: url("./people.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
 }
 
-.App-header img {
-  height: 250px;
-  position: absolute;
-  opacity: 0.25;
-  z-index: 0;
-}
+/*.App-header img {*/
+/*  height: 250px;*/
+/*  position: absolute;*/
+/*  opacity: 0.25;*/
+/*  z-index: 0;*/
+/*}*/
 
 .App-header h1 {
-  position: absolute;
-  z-index: 1;
 }
 
 .App-header nav {
@@ -33,24 +35,35 @@
   background-color: rgba(40, 44, 52, 0.75);
   text-transform: uppercase;
   font-weight: bold;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 2;
 }
 
-.App-header nav div {
+nav {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-evenly;
+  background-color: rgba(40, 44, 52, 0.75);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+nav div {
   cursor: pointer;
 }
 
-.App-header nav a:hover {
+nav a:hover {
   opacity: 0.5;
 }
 
-.App-header nav a {
+nav a {
   text-decoration: none;
   color:white;
 }
+
+
+
+
+
 
 /*overrides*/
 .ReactTable .rt-thead {
@@ -87,11 +100,7 @@ section {
   flex-direction: column;
   justify-content: space-between;
   min-height: 150px;
-  font-family:Avenir;
-  position: absolute;
-  top: 270px;
-  left: 10px;
-  right: 10px;
+  position: relative;
 }
 
 section .row {
@@ -150,32 +159,7 @@ section .actions .cancel {
   background-color:brown;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  justify-content: space-evenly;
-  background-color: rgba(40, 44, 52, 0.75);
-  text-transform: uppercase;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 2;
-}
 
-nav div {
-  cursor: pointer;
-}
-
-nav a:hover {
-  opacity: 0.5;
-}
-
-nav a {
-  text-decoration: none;
-  color:white;
-}
 
 footer {
   background-color: #282c34;
