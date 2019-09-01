@@ -5,6 +5,7 @@ import logo from '../logo.svg';
 import Appointments from '../components/Appointments';
 import '../App.css';
 import {appointmentsAction} from '../actions/appointmentsAction';
+import {physiciansAction} from '../actions/physiciansAction';
 import {getDate, getTime} from '../Utils';
 
 import AppHeader from '../components/AppHeader';
@@ -15,9 +16,13 @@ class Home extends Component {
 	constructor(props){
 		super(props);
 
-		let {appointmentsAction} = this.props;
+		let {appointmentsAction, physiciansAction} = this.props;
 		if (appointmentsAction) {
 			appointmentsAction();
+		}
+
+		if(physiciansAction) {
+			physiciansAction();
 		}
 	}
 
@@ -37,6 +42,7 @@ class Home extends Component {
 						timeFormat={getTime}
 						navigate={this.navigate.bind(this)}
 						appointments={this.props.appointments}
+						physicians={this.props.physicians}
 					/>
 				</section>
 				<AppFooter />
@@ -47,14 +53,16 @@ class Home extends Component {
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		appointments: state.appointments.appointments
+		appointments: state.appointments.appointments,
+		physicians: state.physicians.physicians
 	};
 };
 
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(
 		{
-			appointmentsAction
+			appointmentsAction,
+			physiciansAction
 		},
 		dispatch
 	);

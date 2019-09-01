@@ -23,17 +23,19 @@ class PhysicianToolTip extends Component {
 
 	render() {
 		let content;
+		const {physician} = this.props;
+
 		if(this.state.show) {
 			content = (
 				<div className="content">
 					<div className="content-row">
-						<div>Phyisican Name:</div><div>ok1</div>
+						<div>Phyisican Name:</div><div>{physician.name} </div>
 					</div>
 					<div className="content-row">
-						<div>Specialty:</div><div>ok2</div>
+						<div>Specialty: </div><div>{physician.specialty}</div>
 					</div>
 					<div className="content-row">
-						<div>Education:</div><div>ok3</div>
+						<div>Education: </div><div>{physician.education}</div>
 					</div>
 				</div>
 			)
@@ -48,11 +50,11 @@ class PhysicianToolTip extends Component {
 };
 
 PhysicianToolTip.propTypes = {
-	image: PropTypes.string
+	physician: PropTypes.object
 };
 
 PhysicianToolTip.defaultProps = {
-	image: ''
+	physician: {}
 };
 
 export default PhysicianToolTip;

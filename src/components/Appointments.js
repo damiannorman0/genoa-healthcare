@@ -8,7 +8,7 @@ import PhysicianToolTip from "./PhysicianToolTip";
 import ReactTooltip from "react-tooltip";
 
 const Appointments = (props) => {
-	const {appointments = [], dateFormat, timeFormat, navigate} = props;
+	const {appointments = [], dateFormat, timeFormat, navigate, physicians} = props;
 	return (
 		<div className="Appointments">
 			<ReactTooltip/>
@@ -47,7 +47,7 @@ const Appointments = (props) => {
 								}} onMouseLeave={e => {
 									fooRef.hide();
 								}}>
-									<PhysicianToolTip ref={ref => fooRef = ref} />
+									<PhysicianToolTip ref={ref => fooRef = ref} physician={physicians[row.original.physician_id]} />
 									{row.value}
 								</div>
 							);
@@ -73,11 +73,13 @@ const Appointments = (props) => {
 };
 
 Appointments.propTypes = {
-	appointments: PropTypes.object.isRequired
+	appointments: PropTypes.array.isRequired,
+	physicians: PropTypes.object
 };
 
 Appointments.defaultProps = {
-	appointments: []
+	appointments: [],
+	physicians: {}
 };
 
 export default Appointments;

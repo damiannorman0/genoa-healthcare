@@ -218,4 +218,9 @@ footer div:hover {
   flex-direction: row;
 }
 
+.physician-tool-tip .content .content-row div:first-child{
+  margin-right: 5px;
+  font-weight: bold;
+}
+
 
