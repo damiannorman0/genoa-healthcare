@@ -92,6 +92,10 @@ nav a {
   cursor: pointer;
 }
 
+.ReactTable .rt-th, .ReactTable .rt-td {
+  overflow: visible;
+}
+
 section {
   padding: 20px;
   margin: 10px;
@@ -185,6 +189,33 @@ footer div {
 
 footer div:hover {
   opacity: 0.5;
+}
+
+.physician-tool-tip {
+  position: absolute;
+  z-index: 100;
+  top: -10px;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.physician-tool-tip .content {
+  background-color: rgba(40,44, 52, 0.5);
+  padding: 20px;
+  min-height: 50px;
+  border-radius: 10px;
+  color: white;
+}
+
+.cell {
+  position: relative;
+  overflow: visible;
+}
+
+.physician-tool-tip .content .content-row {
+  display: flex;
+  flex-direction: row;
 }
 
 
