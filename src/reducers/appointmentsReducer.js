@@ -14,6 +14,7 @@ export default (state = initialState, action) => {
 			for(var  i = 0; i <  state.appointments.length; i++) {
 				if (state.appointments[i].id === +action.payload.id) {
 					appointment = state.appointments[i];
+					break;
 				}
 			}
 
