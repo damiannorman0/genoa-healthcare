@@ -17,6 +17,15 @@
   background-position: center;
 }
 
+.App-header img {
+  border-radius: 170px;
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  right: 10px;
+  top:10px;
+}
+
 /*.App-header img {*/
 /*  height: 250px;*/
 /*  position: absolute;*/

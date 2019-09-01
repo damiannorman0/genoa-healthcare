@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 
 const AppHeader = (props) => {
-	const {title = '', selected} = props;
+	const {title = '', selected, user} = props;
 	const links = [{
 		text: 'Appointments',
 		link: '/'
@@ -25,6 +25,9 @@ const AppHeader = (props) => {
 	return (
 		<div>
 			<header className="App-header">
+				<Link to={"/profile"}>
+					<img src={user.image} alt="user" />
+				</Link>
 				<h1 className="App-title">{title}</h1>
 			</header>
 			<nav>
@@ -36,12 +39,14 @@ const AppHeader = (props) => {
 
 AppHeader.propTypes = {
 	title: PropTypes.string,
-	selected: PropTypes.string
+	selected: PropTypes.string,
+	user: PropTypes.object
 };
 
 AppHeader.defaultProps = {
 	title: '',
-	selected: ''
+	selected: '',
+	user: {}
 };
 
 export default (AppHeader);
