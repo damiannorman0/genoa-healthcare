@@ -12,9 +12,9 @@ class Profile extends Component {
 
 		let {userAction, user} = this.props;
 		//would use token from sign in
-		//if(userAction && !user.id) {
+		if (userAction && !user.id) {
 			userAction();
-		//}
+		}
 	}
 	render() {
 		let {user} = this.props;

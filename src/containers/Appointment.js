@@ -9,14 +9,14 @@ import {appointmentAction} from '../actions/appointmentAction';
 import {getDate, getTime} from "../Utils";
 import AppFooter from "../components/AppFooter";
 import PropTypes from "prop-types";
-
+import {userAction} from "../actions/userAction";
 
 class Appointment extends Component {
 	constructor(props) {
 		super(props);
 
 		const {id} = this.props.match.params;
-		const {appointments, appointmentsAction, appointmentAction} = this.props;
+		const {appointments, appointmentsAction, appointmentAction, userAction, user} = this.props;
 
 		if(!appointments.length) {
 			if (appointmentsAction) {
@@ -26,6 +26,10 @@ class Appointment extends Component {
 			if (appointmentAction) {
 				appointmentAction(id);
 			}
+		}
+
+		if (userAction && !user.id) {
+			userAction();
 		}
 	}
 
@@ -41,12 +45,13 @@ class Appointment extends Component {
 	}
 
 	render() {
-		const {appointment = {}} = this.props;
+		const {appointment, user} = this.props;
 		return (
 			<div>
 				<AppHeader
 					title={"Your appointment."}
 					selected={''}
+					user={user}
 				/>
 				<section>
 					<div className="row">
@@ -77,7 +82,7 @@ class Appointment extends Component {
 }
 
 Appointment.propTypes = {
-	appointment:PropTypes.object
+	appointment:PropTypes.object,
 };
 
 Appointment.defaultProps = {
@@ -86,13 +91,16 @@ Appointment.defaultProps = {
 		patient_name:"",
 		physician_name:"",
 		notes:""
+	}, user: {
+
 	}
 };
 
 const mapStateToProps = (state, ownProps) => {
 	return {
 		appointments: state.appointments.appointments,
-		appointment: state.appointments.appointment
+		appointment: state.appointments.appointment,
+		user: state.user.user
 	};
 };
 
@@ -100,7 +108,8 @@ const mapDispatchToProps = dispatch =>
 	bindActionCreators(
 		{
 			appointmentsAction,
-			appointmentAction
+			appointmentAction,
+			userAction
 		},
 		dispatch
 	);

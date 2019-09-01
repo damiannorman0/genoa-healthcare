@@ -22,11 +22,13 @@ const AppHeader = (props) => {
 		return <Link key={`link_${index}`} to={item.link} style={style}>{item.text}</Link>;
 	});
 
+	const imgSrc = user.image || "./missing-picture-icon.jpg";
+
 	return (
 		<div>
 			<header className="App-header">
 				<Link to={"/profile"}>
-					<img src={user.image} alt="user" />
+					<img src={imgSrc} alt="user" />
 				</Link>
 				<h1 className="App-title">{title}</h1>
 			</header>
