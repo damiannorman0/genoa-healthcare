@@ -17,6 +17,6 @@ export const physiciansAction = (id) => {
 					}
 				}
 			});
-		});
+		}, 1000);
 	};
 };
