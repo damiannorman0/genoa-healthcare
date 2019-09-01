@@ -8,6 +8,8 @@ import {appointmentsAction} from '../actions/appointmentsAction';
 import {appointmentAction} from '../actions/appointmentAction';
 import {getDate, getTime} from "../Utils";
 import AppFooter from "../components/AppFooter";
+import PropTypes from "prop-types";
+import Appointments from "../components/Appointments";
 
 
 class Appointment extends Component {
@@ -32,7 +34,7 @@ class Appointment extends Component {
 		const {id} = nextProps.match.params;
 		const {appointments, appointmentsAction, appointmentAction, appointment} = nextProps;
 
-		if(appointments.length && !appointment) {
+		if(appointments.length && !appointment.id) {
 			if (appointmentAction) {
 				appointmentAction(id);
 			}
@@ -74,6 +76,19 @@ class Appointment extends Component {
 		);
 	}
 }
+
+Appointment.propTypes = {
+	appointment:PropTypes.object
+};
+
+Appointment.defaultProps = {
+	appointment: {
+		created_at: "",
+		patient_name:"",
+		physician_name:"",
+		notes:""
+	}
+};
 
 const mapStateToProps = (state, ownProps) => {
 	return {
