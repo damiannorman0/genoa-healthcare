@@ -36,6 +36,11 @@ const AppHeader = (props) => {
 				<Link to={"/profile"}>
 					<img src={imgSrc} alt="user" />
 				</Link>
+				<div className="user-opts">
+					<div>.</div>
+					<div>.</div>
+					<div>.</div>
+				</div>
 				<h1 className="App-title">{title}</h1>
 			</header>
 			<nav>

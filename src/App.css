@@ -22,10 +22,23 @@
   width: 85px;
   height: 85px;
   position: absolute;
-  right: 10px;
+  right: 30px;
   top:10px;
   cursor: pointer;
 }
+
+.App-header .user-opts {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: flex-start;
+  top:10px;
+  right: 10px;
+  font-size: 25px;
+  line-height:10px;
+  font-weight: bold;
+}
+
 
 /*.App-header img {*/
 /*  height: 250px;*/
