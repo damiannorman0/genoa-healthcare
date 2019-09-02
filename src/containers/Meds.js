@@ -23,7 +23,7 @@ class Meds extends Component {
 		return (
 			<div>
 				<AppHeader title={"Your medications -\nin one place."}
-						   selected={'meds'}
+						   selected={'medications'}
 						   user={user}/>
 				<AppFooter />
 				<section>
