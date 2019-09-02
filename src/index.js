@@ -12,7 +12,7 @@ import Resources from './containers/Resources';
 
 import { createBrowserHistory } from "history";
 import {register} from './serviceWorker';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Router, Route } from 'react-router-dom'
 
 const history = createBrowserHistory();
 
