@@ -11,7 +11,7 @@ export const physiciansAction = (id) => {
 						"start": "2015-04-24T07:00:00-06:00",
 						"updated_at": "2015-04-21T10:44:51-06:00",
 						"name": "Gregory House",
-						"specialty": "Mental Health",
+						"specialty": "Obscure health conditions",
 						"education": "All of it",
 						"image": "/house.png"
 					}
