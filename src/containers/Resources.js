@@ -26,6 +26,11 @@ class Resources extends Component {
 						   selected={'resources'}
 						   user={user}/>
 				<AppFooter />
+				<section>
+					<div className="row">
+						<div>TODO</div>
+					</div>
+				</section>
 			</div>
 		);
 	}
