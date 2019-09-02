@@ -22,7 +22,7 @@ class Meds extends Component {
 
 		return (
 			<div>
-				<AppHeader title={"Your medications."}
+				<AppHeader title={"Your medications -\nin one place."}
 						   selected={'meds'}
 						   user={user}/>
 				<AppFooter />

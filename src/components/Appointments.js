@@ -5,13 +5,11 @@ import PropTypes from 'prop-types';
 import {getDate, getTime} from "../Utils";
 import PhysicianToolTip from "./PhysicianToolTip";
 
-import ReactTooltip from "react-tooltip";
 
 const Appointments = (props) => {
 	const {appointments = [], navigate, physicians} = props;
 	return (
 		<div className="Appointments">
-			<ReactTooltip/>
 			<ReactTable
 				data={appointments}
 				defaultPageSize={10}
