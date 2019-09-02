@@ -37,7 +37,7 @@ class Profile extends Component {
 
 		return (
 			<div>
-				<AppHeader title={"Your information. Your choice."}
+				<AppHeader title={"Your information.\nYour choice."}
 						   selected={'profile'}
 						   user={user}/>
 				<section>
