@@ -30,6 +30,9 @@ class Meds extends Component {
 					<div className="row">
 						<div>TODO</div>
 					</div>
+					<div className="actions">
+						<button className="amber">request refill</button>
+					</div>
 				</section>
 			</div>
 		);
