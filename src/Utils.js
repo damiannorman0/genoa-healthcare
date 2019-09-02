@@ -4,6 +4,7 @@ export const getDate = (date) => {
 	}
 
 	date = date.split('T')[0];
+	date = date.replace(/[0-9]{4}\-/gi, '');
 	return date;
 };
 

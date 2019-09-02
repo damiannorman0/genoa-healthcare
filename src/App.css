@@ -118,6 +118,13 @@ nav a {
   overflow: visible;
 }
 
+@media only screen and (max-width: 950px) {
+  .ReactTable .rt-th, .ReactTable .rt-td {
+    overflow: hidden;
+    font-size: small;
+  }
+}
+
 section {
   padding: 20px;
   margin: 10px;

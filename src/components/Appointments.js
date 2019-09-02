@@ -54,7 +54,7 @@ const Appointments = (props) => {
 						}
 					},
 					{
-						Header: "Date and Time",
+						Header: "Date",
 						id: "start",
 						accessor: d => {
 							return (`${getDate(d.start)}, ${getTime(d.start)}`)
