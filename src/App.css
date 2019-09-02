@@ -52,15 +52,7 @@
   font-size:2em;
 }
 
-.App-header nav {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  justify-content: space-evenly;
-  background-color: rgba(40, 44, 52, 0.75);
-  text-transform: uppercase;
-  font-weight: bold;
-}
+
 
 nav {
   display: flex;
@@ -70,6 +62,12 @@ nav {
   background-color: rgba(40, 44, 52, 0.75);
   text-transform: uppercase;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 950px) {
+  nav {
+    flex-direction: column;
+  }
 }
 
 nav div {
@@ -145,8 +143,12 @@ section .row:last-child div:first-child {
   border-bottom-left-radius: 10px;
 }
 
+section .row div {
+  width: 50%;
+}
+
 section .row div:first-child {
-  width: 15%;
+  max-width: 300px;
   font-weight: bold;
   background-color: #61dafb;
   border-bottom: solid;
@@ -175,7 +177,6 @@ section .actions .amber,  section .actions .red {
   padding: 10px;
   color: white;
   cursor: pointer;
-  font-size: medium;
   text-transform: uppercase;
   font-size: small;
   font-weight: bold;
@@ -189,6 +190,22 @@ section .actions .amber{
 
 section .actions .red {
   background-color:brown;
+}
+
+@media only screen and (max-width: 950px) {
+  section .actions {
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  section .actions .amber,  section .actions .red {
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    max-width: 300px;
+  }
 }
 
 

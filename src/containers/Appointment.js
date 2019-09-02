@@ -10,6 +10,7 @@ import {getDate, getTime} from "../Utils";
 import AppFooter from "../components/AppFooter";
 import PropTypes from "prop-types";
 import {userAction} from "../actions/userAction";
+import '../App.css';
 
 class Appointment extends Component {
 	constructor(props) {
