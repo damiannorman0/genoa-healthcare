@@ -46,6 +46,18 @@ class Profile extends Component {
 						<div>{user.name}</div>
 					</div>
 					<div className="row">
+						<div>Date of birth:</div>
+						<div>{user.dob}</div>
+					</div>
+					<div className="row">
+						<div>Height:</div>
+						<div>{user.height}</div>
+					</div>
+					<div className="row">
+						<div>Weight:</div>
+						<div>{user.weight}</div>
+					</div>
+					<div className="row">
 						<div>Physician Name:</div>
 						<div>{physician.name}</div>
 					</div>
