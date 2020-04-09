@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import Appointments from 'components/Appointments';
+import Appointments from 'components/appointments/Appointments';
 import 'global.css';
 import {appointmentsAction} from 'actions/appointmentsAction';
 import {physiciansAction} from 'actions/physiciansAction';

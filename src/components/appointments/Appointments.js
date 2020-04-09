@@ -43,7 +43,7 @@ const Appointments = (props) => {
 									fooRef.show();
 
 								}} onMouseLeave={e => {
-									//fooRef.hide();
+									fooRef.hide();
 								}}>
 									<PhysicianToolTip ref={ref => fooRef = ref} physician={physicians[row.original.physician_id]} />
 									{row.value}
