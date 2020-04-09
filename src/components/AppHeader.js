@@ -28,7 +28,7 @@ const AppHeader = (props) => {
 		return <Link key={`link_${index}`} to={item.link} style={style}>{item.text}</Link>;
 	});
 
-	const imgSrc = user.image || "./missing-picture-icon.jpg";
+	const imgSrc = user.image || "missing-picture-icon.jpg";
 
 	return (
 		<div>

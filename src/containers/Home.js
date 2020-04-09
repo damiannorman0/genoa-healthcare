@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import Appointments from '../components/Appointments';
-import '../App.css';
-import {appointmentsAction} from '../actions/appointmentsAction';
-import {physiciansAction} from '../actions/physiciansAction';
-import {userAction} from '../actions/userAction';
+import Appointments from 'components/Appointments';
+import 'App.css';
+import {appointmentsAction} from 'actions/appointmentsAction';
+import {physiciansAction} from 'actions/physiciansAction';
+import {userAction} from 'actions/userAction';
 
-import {getDate, getTime} from '../Utils';
+import {getDate, getTime} from 'Utils';
 
-import AppHeader from '../components/AppHeader';
-import AppFooter from "../components/AppFooter";
+import AppHeader from 'components/AppHeader';
+import AppFooter from "components/AppFooter";
 
 
 class Home extends Component {

@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import configureStore from './store';
-import './index.css';
-import Home from './containers/Home';
-import Appointment from './containers/Appointment';
-import Profile from './containers/Profile';
-import Meds from './containers/Meds';
-import Resources from './containers/Resources';
+import configureStore from 'store';
+import 'index.css';
+import Home from 'containers/Home';
+import Appointment from 'containers/Appointment';
+import Profile from 'containers/Profile';
+import Meds from 'containers/Meds';
+import Resources from 'containers/Resources';
 
 
 import { createBrowserHistory } from "history";

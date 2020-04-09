@@ -15,7 +15,7 @@ export const userAction = (token) => dispatch => {
 				"updated_at": "2015-04-21T10:44:51-06:00",
 				"dob": "1975-06-19",
 				"name": "Mike Ross",
-				"image": "https://media.licdn.com/dms/image/C5603AQHb49adxXrA2A/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=63YBbkU3OO_Ki8aXmY-r0Up8NVW08jNz5_XGIAjXCBs"
+				"image": "https://media-exp1.licdn.com/dms/image/C4E03AQHYnKnUzK5zGg/profile-displayphoto-shrink_200_200/0?e=1591833600&v=beta&t=pYLjxoI3-kDx6VXqVG-vDUPUHJDxG1Z8QaXnAB-ybV8"
 			}
 		});
 	}, 1000);

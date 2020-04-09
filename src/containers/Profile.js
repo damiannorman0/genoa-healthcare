@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import AppHeader from "../components/AppHeader";
-import AppFooter from "../components/AppFooter";
+import AppHeader from "components/AppHeader";
+import AppFooter from "components/AppFooter";
 import {bindActionCreators} from "redux";
-import {userAction} from "../actions/userAction";
-import '../App.css';
+import {userAction} from "actions/userAction";
+import 'App.css';
 import {connect} from "react-redux";
-import {physiciansAction} from "../actions/physiciansAction";
+import {physiciansAction} from "actions/physiciansAction";
 import PropTypes from "prop-types";
 
 class Profile extends Component {
