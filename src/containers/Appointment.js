@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-import AppHeader from 'components/AppHeader';
+import AppHeader from "components/appHeader/AppHeader";
 
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {appointmentsAction} from 'actions/appointmentsAction';
 import {appointmentAction} from 'actions/appointmentAction';
 import {getDate, getTime} from "Utils";
-import AppFooter from "components/AppFooter";
+import AppFooter from "components/appFooter/AppFooter";
 import PropTypes from "prop-types";
 import {userAction} from "actions/userAction";
-import 'App.css';
+import 'global.css';
 
 class Appointment extends Component {
 	constructor(props) {

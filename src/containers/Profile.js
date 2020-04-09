@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import AppHeader from "components/AppHeader";
-import AppFooter from "components/AppFooter";
+import AppHeader from "components/appHeader/AppHeader";
+import AppFooter from "components/appFooter/AppFooter";
 import {bindActionCreators} from "redux";
 import {userAction} from "actions/userAction";
-import 'App.css';
+import 'global.css';
 import {connect} from "react-redux";
 import {physiciansAction} from "actions/physiciansAction";
 import PropTypes from "prop-types";

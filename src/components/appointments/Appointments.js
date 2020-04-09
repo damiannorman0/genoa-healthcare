@@ -2,7 +2,7 @@ import React from 'react';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 import PropTypes from 'prop-types';
-import {getDate, getTime} from "../Utils";
+import {getDate, getTime} from "Utils";
 import PhysicianToolTip from "components/toolTip/PhysicianToolTip";
 
 
@@ -43,7 +43,7 @@ const Appointments = (props) => {
 									fooRef.show();
 
 								}} onMouseLeave={e => {
-									fooRef.hide();
+									//fooRef.hide();
 								}}>
 									<PhysicianToolTip ref={ref => fooRef = ref} physician={physicians[row.original.physician_id]} />
 									{row.value}
