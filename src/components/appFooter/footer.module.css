@@ -1,0 +1,21 @@
+.footerContainer {
+    background-color: #282c34;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    text-transform: capitalize;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+}
+
+.footerContainer  div {
+    cursor: pointer;
+}
+
+.footerContainer  div:hover {
+    opacity: 0.5;
+}

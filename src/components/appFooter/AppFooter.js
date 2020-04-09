@@ -1,8 +1,9 @@
 import React from 'react';
+import {footerContainer} from "components/appFooter/footer.module.css";
 
 const AppFooter = (props) => {
 	return (
-		<footer>
+		<footer className={footerContainer}>
 			<div>privacy</div>
 			<div>contact us</div>
 		</footer>

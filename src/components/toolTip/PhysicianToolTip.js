@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
+import styles from "components/toolTip/toolTip.module.css";
 
 class PhysicianToolTip extends Component {
 	constructor(props) {
@@ -27,15 +28,15 @@ class PhysicianToolTip extends Component {
 
 		if(this.state.show) {
 			content = (
-				<div className="content">
+				<div className={styles.content}>
 					<img src={physician.image} alt={`${physician.name}`} />
-					<div className="content-row">
+					<div className={styles.contentRow}>
 						<div>Phyisican Name:</div><div>{physician.name} </div>
 					</div>
-					<div className="content-row">
+					<div className={styles.contentRow}>
 						<div>Specialty: </div><div>{physician.specialty}</div>
 					</div>
-					<div className="content-row">
+					<div className={styles.contentRow}>
 						<div>Education: </div><div>{physician.education}</div>
 					</div>
 				</div>
@@ -43,7 +44,7 @@ class PhysicianToolTip extends Component {
 		}
 
 		return (
-			<div className="physician-tool-tip">
+			<div className={styles.physicianToolTip}>
 				{content}
 			</div>
 		);

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
+import {appHeader} from "components/appHeader/appHeader.module.css"
 
 
 const AppHeader = (props) => {
@@ -32,7 +33,7 @@ const AppHeader = (props) => {
 
 	return (
 		<div>
-			<header className="App-header">
+			<header className={appHeader}>
 				<Link to={"/profile"}>
 					<img src={imgSrc} alt="user" />
 				</Link>
